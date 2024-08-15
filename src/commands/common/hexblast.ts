@@ -7,25 +7,19 @@ export default new Command({
     type: ApplicationCommandType.ChatInput,
     run({ interaction }) {
 
-        const row = new ActionRowBuilder<ButtonBuilder>({
+        const button = new ActionRowBuilder<ButtonBuilder>({
             components: [
-                new ButtonBuilder({ customId: "Trickster", label: "Trickster", style: ButtonStyle.Success }),
-                new ButtonBuilder({ customId: "Saboteur", label: "Saboteur", style: ButtonStyle.Success })
+                new ButtonBuilder({ url: "https://pobb.in/yEp-sdHqe9eA", label: "Trickster", style: ButtonStyle.Link }),
+                new ButtonBuilder({ url: "https://pobb.in/Q0l9RrrBJcLD", label: "Saboteur", style: ButtonStyle.Link }),
+                new ButtonBuilder({ url: "https://poe.ninja/builds/settlers/character/Sexo_Assado/CURSE_YOU_BAYLE?type=exp&i=0&search=name%3Dcurse_you", label: "Malpo-T17", style: ButtonStyle.Link }),
+                new ButtonBuilder({ url: "https://poe.ninja/builds/settlers/character/Sexo_Assado/CURSE_YOU_BAYLE?type=exp&i=0&search=name%3Dcurse_you&timemachine=week-2", label: "Malpo-Sanctum", style: ButtonStyle.Link })
             ]
 
         })
 
-        interaction.reply({ ephemeral: false, components: [row] })
+        interaction.reply({ ephemeral: false, components: [button] })
 
 
-    },
-    buttons: new Collection([
-        ["Trickster", async (interaction) => {
-            interaction.reply({ ephemeral: false, content: "https://pobb.in/yEp-sdHqe9eA" })
-        }],
-        ["Saboteur", async (interaction) => {
-            interaction.reply({ ephemeral: false, content: "https://pobb.in/Q0l9RrrBJcLD" })
-        }]
-    ])
+    }
 
 })
