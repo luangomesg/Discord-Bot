@@ -3,7 +3,7 @@ import { Command } from "../../structs/types/Command";
 
 export default new Command({
     name: "limpar",
-    description: "Limpa as mensagens do canal",
+    description: "Clear channel messages",
     type: ApplicationCommandType.ChatInput,
     options: [
         {

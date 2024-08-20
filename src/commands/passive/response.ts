@@ -14,7 +14,7 @@ export default new Command({
             return;
         }
 
-        interaction.reply({ content: `Monitorando o canal ${channel.name} para uma mensagem específica.`, ephemeral: true });
+        interaction.reply({ content: `Monitoring the channel  ${channel.name} for a specific message.`, ephemeral: true });
 
         const mensagens = ["oi", "minecraft", "mirage", "f", "🤝"]; // Altere para as mensagens que você quer monitorar
         const respostasBot = ["Olá 😊", "PRA VO CÊ, QUAL A MELHOR FARM DO MINECRAFT", "Dois dias", "F", "🤝"]; // Altere para as respostas correspondentes
