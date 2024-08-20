@@ -3,7 +3,7 @@ import { TextChannel } from "discord.js";
 
 export default new Command({
     name: "monitorar",
-    description: "Monitora um canal e responde a uma mensagem específica",
+    description: "Monitoring a channel and reply to a specific message.",
     async run({ interaction }) {
         if (!interaction.isChatInputCommand() || !interaction.inCachedGuild()) return;
 
@@ -14,7 +14,7 @@ export default new Command({
             return;
         }
 
-        interaction.reply({ content: `Monitoring the channel  ${channel.name} for a specific message.`, ephemeral: true });
+        interaction.reply({ content: `Monitorando o canal ${channel.name} para uma mensagem especifica.`, ephemeral: true });
 
         const mensagens = ["oi", "minecraft", "mirage", "f", "🤝"]; // Altere para as mensagens que você quer monitorar
         const respostasBot = ["Olá 😊", "PRA VO CÊ, QUAL A MELHOR FARM DO MINECRAFT", "Dois dias", "F", "🤝"]; // Altere para as respostas correspondentes
